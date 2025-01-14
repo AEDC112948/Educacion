@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Página Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        // Inicializar TinyMCE para editar el contenido
+        tinymce.init({
+            selector: '#editor',
+            plugins: 'autosave code image link lists table',
+            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | bullist numlist | link image | code',
+            height: 500
+        });
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Editor de la Página Principal</h1>
+        <p class="text-muted text-center">Edita el contenido del archivo <strong>index.html</strong> directamente desde aquí.</p>
+
+        <!-- Formulario para cargar el contenido de index.html -->
+        <form id="editor-form" method="post" action="save_index.php">
+            <div class="mb-3">
+                <label for="editor" class="form-label">Contenido de la página:</label>
+                <textarea id="editor" name="content"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Guardar Cambios</button>
+        </form>
+    </div>
+</body>
+</html>

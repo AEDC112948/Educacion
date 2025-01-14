@@ -1,2 +1,1 @@
-# Educacion
-Pagina de Educacion 
+# Educ

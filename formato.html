@@ -1,0 +1,129 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Educación</title>
+
+    <!-- Agregar enlace a la hoja de estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Barra de navegación (Navbar) con menú desplegable -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #802434;">
+        <div class="container-fluid">
+
+            <!-- Logotipo 1 a la izquierda -->
+            <a class="navbar-brand" href="#">
+                <img src="logo1.png" alt="Logo 1" class="navbar-logo" style="max-height: 50px;">
+            </a>
+
+            <!-- Botón para el menú móvil -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programa
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="conserjes-secretarias.html">Conserjes y Secretarias</a></li>
+                            <li><a class="dropdown-item" href="convocatoria.html">Convocatoria</a></li>
+                            <li><a class="dropdown-item" href="reglas.html">Reglas</a></li>
+                            <li><a class="dropdown-item" href="padron.html">Padrón</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mejoriaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mejora Regulatoria
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mejoriaDropdown">
+                            <li class="dropdown-item">
+                                Trámites
+                                <select class="form-select mt-2" onchange="redirectToPage(this.value)">
+                                    <option selected disabled>Seleccionar</option>
+                                    <option value="convenios.html">Convenios</option>
+                                    <option value="servicio-social.html">Servicio Social</option>
+                                    <option value="becas-convenios.html">Becas Convenios</option>
+                                    <option value="credenciales-biblioteca.html">Credenciales de Biblioteca</option>
+                                </select>
+                            </li>
+                            <li class="dropdown-item">
+                                REMTYS
+                                <select class="form-select mt-2" onchange="redirectToPage(this.value)">
+                                    <option selected disabled>Seleccionar</option>
+                                    <option value="formato.html">Formato</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacion.html">Gestoría</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Logotipo 2 a la derecha -->
+            <a class="navbar-brand" href="#">
+                <img src="logo2.png" alt="Logo 2" class="navbar-logo" style="max-height: 50px;">
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        <h1 class="text-center">Descargar Archivos REMTYS</h1>
+        <p class="text-center lead">Haz clic en el botón de descarga para obtener los archivos.</p>
+
+        <!-- Botones de descarga -->
+        <div class="row mt-5">
+            <div class="col-md-3 text-center">
+                <h2>CEDULA REMTYS 1 servicio </h2>
+                <!-- Botón para descargar archivo sin redirección -->
+                <a href="REMTS/CEDULA REMTYS 1 servicio ok.pdf" class="btn btn-primary mt-3" download="CEDULA REMTYS 1 servicio ok.pdf">Descargar</a>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <h2>CEDULA REMTYS Beca Convenio 2024</h2>
+                <!-- Botón para descargar archivo sin redirección -->
+                <a href="REMTS/CEDULA REMTYS beca convenio 2024.pdf" class="btn btn-primary mt-3" download="CEDULA REMTYS beca convenio 2024.pdf">Descargar</a>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <h2>CEDULA REMTYS Convenio 2024</h2>
+                <!-- Botón para descargar archivo sin redirección -->
+                <a href="REMTS/CEDULA REMTYS convenio 2024.pdf" class="btn btn-primary mt-3" download="CEDULA REMTYS convenio 2024.pdf">Descargar</a>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <h2>CEDULA REMTYS Creadencialización 2024</h2>
+                <!-- Botón para descargar archivo sin redirección -->
+                <a href="REMTS/CEDULA REMTYS creadencialización 2024.pdf" class="btn btn-primary mt-3" download="CEDULA REMTYS creadencialización 2024.pdf">Descargar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>© 2024 Departamento de Educación en Ixtapaluca. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
